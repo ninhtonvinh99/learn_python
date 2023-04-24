@@ -67,9 +67,112 @@ greet()
 greet('Ha') """
 
 # Tham so o gioi han :
-def greet(*names):
+""" def greet(*names):
     for name in names:
         print("Hello", name )
 
-greet("Ninh" , "Ha")
+greet("Ninh" , "Ha") """
+
+# Ham de quy
+
+# Ham tinh day fibo cua 1 so
+""" def calc_factorial(x):
+    if x == 1:
+        return 1
+    else:
+        return (x * calc_factorial(x-1))
+
+num = 4
+print("Dãy fibo của ", num, "là ", calc_factorial(num)) """
+
+# kHU DE QUY
+
+""" num = 4
+result = 1;
+for i in range(1, num + 1):
+    result = result * i
+
+print("Kết quả khử đệ quy là: ", result) """
+
+# Ham an danh
+
+""" double = lambda x : x*2
+print(double(4)) """
+
+# dùng lambda trong 1 function khác
+""" def myfunc(n):
+    return lambda a : a * n
+
+# Biến mydoubler lúc này sẽ là một lambda function
+mydoubler = myfunc(2)
+
+# Vì vậy bạn có thể gọi thoải mái và nhiều lần ở nhièu vị trí
+# Và vẫn kế thừa giá trị n của hàm myfunc
+print(mydoubler(11)) # Kết quả 22
+print(mydoubler(10)) # Kết quả 20 """
+
+"""def myfunc(n , a ) :
+    return a*n
+print(myfunc(2,2))"""
+
+# kết hợp với hàm filter
+
+# Hàm filter có công dụng là lọc dữ liệu theo tham số truyên vào
+# tham số đầu tiên là hàm kiểm tra điều kiện lọc : True giữ lại, False lọc
+# tham số thứ hai là dữ liệu cần lọc.
+# hàm filter trả ra 1  iterator chưá các ptu được lọc, cần dùng list() or tuple() để sử dụng
+
+# VD lọc số chẵn trong 1 list
+
+"""my_list = [1, 3, 4,6,8, 10 ]
+list1 = list(filter(lambda x : (x%2==0), my_list))
+print(list1)"""
+
+# Kết hợp vói hàm map ()
+
+# Hàm map có công dụng là lặp qua từng phần tử và thay đổi giá trị của nó dựa vào hai tham số
+# tham số đầu tiên là một hàm dùng để xử lý dữ liệu và trả kết quả về
+# tham số thứ hai là dữ liệu cần lặp.
+
+# VD dùng nhân đôi các giá trị cả các ptu trong list
+
+""" my_list = [ 1, 2, 3,4]
+list1 = list(map(lambda x : x*2,my_list))
+print(list1) """
+
+# biến toàn cục và biến cục bộ
+
+# Global Variable
+
+""" x = "Học Python tại Freetuts.net"
+def foo():
+    print("Trong hàm:", x)
+foo()
+print("Ngoài hàm:", x) """
+
+# Local variable
+""" def foo():
+    y = "local"
+
+foo()
+
+# Lệnh này sai vì biến y không tồn tại
+print(y) """
+
+# từ khóa global
+
+x = "global"
+
+""" def foo():
+    global x
+    y = "local"
+    x = x * 2
+    print(x)
+    print(y)
+
+foo()
+foo() # Khi chúng ta thay đổi giá trị cho biến global tong hàm 
+      # thì gá trị của biến đó thay đổi theo """
+
+
 
